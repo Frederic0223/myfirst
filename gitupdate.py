@@ -8,4 +8,20 @@ git add .
  git commit -m 'init'
 #link to my github
 git remote add origin https://github.com/Frederic0315/myfirst.git
+
+git push -u origin master
 git push --set-upstream origin master
+
+#if shows: ! [rejected] master -> master (fetch first) error: failed to push some refs to 'https://github.com/Frederic0315/myfirst.git' then run follows:
+git fetch origin master
+git merge origin master
+git fetch origin master:tmp
+git rebase tmp
+git push origin HEAD:master
+git branch -D tmp
+
+#or you can:第一次要连接一下远程仓库 之后就是 git add   git commit   git push 这仨就好了
+git rm --cached <folder_name>
+git add .
+git commit -m "<your_message>"
+git push --all
