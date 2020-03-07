@@ -21,7 +21,11 @@ git push origin HEAD:master
 git branch -D tmp
 
 #or you can:第一次要连接一下远程仓库 之后就是 git add   git commit   git push 这仨就好了
-git rm --cached <folder_name>
+git rm --cached <D:\Documents\PythonLearning>
 git add .
 git commit -m "<your_message>"
 git push --all
+#use this is sufficient
+git add .
+git commit -m "<your_message>"
+git push
